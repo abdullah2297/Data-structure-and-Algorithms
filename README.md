@@ -269,3 +269,26 @@ print(f"is a queue become empty? : {my_queue.empty()}")
 #### Notes:
 - Time Complexity : O(1)
 - List is a Python’s built-in data structure that can be used as a queue but it requring o(n) time in insertation and deletion
+
+
+# Q4: Write a Python program to create a Stack and display all the members and size of the stack.
+```
+from queue import LifoQueue
+# initialize New Stack
+my_stack = LifoQueue()
+# Check for size
+print(f"stack size : {my_stack.qsize()}")
+# Add some data
+my_stack.put('Ahmed')
+my_stack.put('Abdullah')
+my_stack.put('Ali')
+# Check size again
+print(f"stack size after adding data : {my_stack.qsize()}")
+# get some data
+print(f"first get : {my_stack.get()}")
+print(f"second get : {my_stack.get()}")
+print(f"Third get  : {my_stack.get()}")
+
+
+print(f"is a stack become empty? : {my_stack.empty()}")
+```
