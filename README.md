@@ -201,3 +201,71 @@ def linear_search(lis, item):
 print(linear_search([1,2,3],3))  # True
 print(linear_search([1,2,3],5))  # False
 ```
+### Q3: Write a Python program to sort a list of elements using the selection sort algorithm. ##
+
+```
+def selection_sort(lis):
+
+  for slot in range(len(lis)):
+    min_idx = slot
+
+    for location in range(slot+1, len(lis)):
+
+      if lis[min_idx] > lis[location]:
+        min_idx = location
+  
+    lis[slot], lis[min_idx] = lis[min_idx], lis[slot]
+  return lis
+
+
+print(selection_sort([1,2,50,15,5,4,0]))
+```
+### Q4: Write a Python program to locate the left insertion point for a specified value in sorted order.
+```
+import bisect
+def insertation_index(lis, item):
+  lis.sort() ## sort your list O(n log n)
+  insert_point = bisect.bisect_left(lis,item)
+  return insert_point
+
+family_ages = [18,22,24,45,64]
+print(f"insertation_index for dad age: {insertation_index(family_ages,58)}")
+```
+#### Notes : Time complexity for bisec_left is O(log n), it is use Binary search
+
+### Q5: Write a Python program to insert items into a list in sorted order.
+```
+def insert_item(lis, item):
+  lis.sort()
+  bisect.insort(lis, item)
+  return lis
+
+print(f" New list : {insert_item(family_ages,58)}")
+```
+#### Notes : The time complexity of insort() is O(n)
+
+### Q6: Write a Python program to create a queue and display all the members and size of the queue.
+
+```
+from queue import Queue
+# initialize New Queue
+my_queue = Queue()
+# Check for size
+print(f"Queu size : {my_queue.qsize()}")
+# Add some data
+my_queue.put('Ahmed')
+my_queue.put('Abdullah')
+my_queue.put('Ali')
+# Check size again
+print(f"Queu size after adding data : {my_queue.qsize()}")
+# get some data
+print(f"first get : {my_queue.get()}")
+print(f"second get : {my_queue.get()}")
+print(f"Third get  : {my_queue.get()}")
+
+
+print(f"is a queue become empty? : {my_queue.empty()}")
+```
+#### Notes:
+- Time Complexity : O(1)
+- List is a Python’s built-in data structure that can be used as a queue but it requring o(n) time in insertation and deletion
