@@ -271,7 +271,7 @@ print(f"is a queue become empty? : {my_queue.empty()}")
 - List is a Python’s built-in data structure that can be used as a queue but it requring o(n) time in insertation and deletion
 
 
-# Q4: Write a Python program to create a Stack and display all the members and size of the stack.
+### Q7: Write a Python program to create a Stack and display all the members and size of the stack.
 ```
 from queue import LifoQueue
 # initialize New Stack
