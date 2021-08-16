@@ -289,6 +289,5 @@ print(f"first get : {my_stack.get()}")
 print(f"second get : {my_stack.get()}")
 print(f"Third get  : {my_stack.get()}")
 
-
 print(f"is a stack become empty? : {my_stack.empty()}")
 ```
